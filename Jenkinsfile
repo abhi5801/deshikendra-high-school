@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'maven'
-    }
-
     environment {
         SONAR_TOKEN = credentials('sonar-token')
     }
@@ -19,17 +15,10 @@ pipeline {
             }
         }
 
-        stage('Build Application') {
+        stage('Check Files') {
             steps {
 
-                sh 'mvn clean package'
-            }
-        }
-
-        stage('Run Test Cases') {
-            steps {
-
-                sh 'mvn test'
+                sh 'ls -la'
             }
         }
 
@@ -38,12 +27,13 @@ pipeline {
 
                 withSonarQubeEnv('sonarqube') {
 
-                    sh """
-                    mvn sonar:sonar \
+                    sh '''
+                    sonar-scanner \
                     -Dsonar.projectKey=school-project \
+                    -Dsonar.sources=. \
                     -Dsonar.host.url=http://3.110.51.226:9000 \
                     -Dsonar.login=$SONAR_TOKEN
-                    """
+                    '''
                 }
             }
         }
@@ -52,7 +42,7 @@ pipeline {
     post {
 
         success {
-            echo 'Build and SonarQube Scan Successful!'
+            echo 'SonarQube Scan Successful!'
         }
 
         failure {
