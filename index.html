@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshikendra High School | Admission & Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for professional typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-area">
+                <h1>Deshikendra High School</h1>
+                <p class="tagline">Nurturing Minds, Shaping Futures</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#admissions" class="btn-nav">Apply Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <h2>Welcome to Deshikendra High School</h2>
+            <p>Providing quality education, fostering character, and preparing students for global opportunities.</p>
+            <a href="#admissions" class="btn-primary">Explore Admissions 2026</a>
+        </div>
+    </section>
+
+    <!-- Services / Parameters Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Features & Services</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="icon">🎓</div>
+                    <h3>Academic Excellence</h3>
+                    <p>A rigorous curriculum paired with experienced faculty to ensure top-tier intellectual development.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📝</div>
+                    <h3>Admission Service</h3>
+                    <p>A transparent, streamlined digital application process designed to make enrollment stress-free for parents.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🔬</div>
+                    <h3>Modern Infrastructure</h3>
+                    <p>Equipped with advanced science labs, computer rooms, and resource-rich libraries.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">⚽</div>
+                    <h3>Sports & Co-Curricular</h3>
+                    <p>Holistic development through athletic programs, arts, music, and comprehensive club activities.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="admission-section">
+        <div class="container form-container">
+            <h2 class="section-title">Admission Enquiry Portal</h2>
+            <p class="form-subtitle">Fill out the parameters below, and our admissions desk will contact you within 24 hours.</p>
+            
+            <form id="admissionForm">
+                <div class="form-group">
+                    <label for="studentName">Student's Full Name</label>
+                    <input type="text" id="studentName" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="gradeLevel">Seeking Admission For Grade</label>
+                    <select id="gradeLevel" required>
+                        <option value="" disabled selected>Select Grade</option>
+                        <option value="grade-8">Grade 8</option>
+                        <option value="grade-9">Grade 9</option>
+                        <option value="grade-10">Grade 10</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="parentEmail">Parent/Guardian Email Address</label>
+                    <input type="email" id="parentEmail" required placeholder="parent@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="parentPhone">Contact Number</label>
+                    <input type="tel" id="parentPhone" required placeholder="+1 (555) 000-0000">
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Inquiry</button>
+            </form>
+            <div id="formFeedback" class="form-feedback hidden"></div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Deshikendra High School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
